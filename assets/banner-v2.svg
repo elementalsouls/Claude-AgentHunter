@@ -78,7 +78,7 @@
   <g class="sans" font-weight="800">
     <text x="290" y="262" font-size="116" letter-spacing="-2" class="white" textLength="380" lengthAdjust="spacingAndGlyphs">claude</text>
     <text x="716" y="262" font-size="116" font-weight="300" class="dim">/</text>
-    <text x="782" y="262" font-size="116" letter-spacing="-2" class="red" filter="url(#glow)" textLength="600" lengthAdjust="spacingAndGlyphs">hunt-agent</text>
+    <text x="782" y="262" font-size="116" letter-spacing="-2" class="red" filter="url(#glow)" textLength="600" lengthAdjust="spacingAndGlyphs">agenthunter</text>
   </g>
   <line x1="784" y1="296" x2="1384" y2="296" stroke="#ff2d4f" stroke-width="3"/>
 
