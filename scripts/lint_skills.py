@@ -61,7 +61,10 @@ def lint_skill(skill_md: str) -> None:
     if fm_name and not NAME_RE.match(fm_name):
         err(skill_md, f"name '{fm_name}' is not lowercase-hyphen")
     desc = fm.get("description", "")
-    if len(desc) > 1024:
+    if desc.strip() in (">", "|", ">-", "|-", ">+", "|+"):
+        # a YAML block scalar collapses to its indicator here, silently dodging the length gate
+        err(skill_md, "description must be a single-line quoted string, not a block scalar (>, |)")
+    elif len(desc) > 1024:
         err(skill_md, f"description is {len(desc)} chars (> 1024)")
     body = text[text.find("\n---", 3) + 4:] if fm else text
     if "Runnable Probe" not in body:

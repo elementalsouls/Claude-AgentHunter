@@ -55,7 +55,7 @@ NIST AI RMF + NIST AI 600-1 (Generative AI Profile) · Google SAIF · EU AI Act 
 ---
 
 ## 4. Coverage stance (honest)
-This library was **field-validated on a 19-level agent CTF** and cross-checked against the frameworks above. Some agent-level threats are **not yet covered** and are tracked as planned skills (see `COVERAGE-MATRIX.md`): prompt-injection (dedicated), output-rendering exfil (zero-click/markdown-image/XSS), memory poisoning, RAG/embedding, resource overload / denial-of-wallet, MCP supply-chain (tool rug-pull), guardrail evasion, human-in-the-loop bypass. Gaps are stated, not hidden — that is the difference between a research artifact and a vibe.
+This library was **field-validated on a 19-level agent CTF** and cross-checked against the frameworks above. The classes once tracked as planned — prompt-injection (dedicated), output-rendering exfil (zero-click/markdown-image/XSS), memory poisoning, RAG/embedding, resource overload / denial-of-wallet, MCP supply-chain (tool rug-pull), guardrail evasion, human-in-the-loop bypass — are now **all shipped** as `hunt-agent-*` skills, each with a `[CONFIRMED]` lab gate (see `COVERAGE-MATRIX.md`). Two classes stay deliberately field/reference with an honest note (prompt-injection needs a live model to obey; browser-use needs a real browser) — a deterministic gate would fake the thing under test. Gaps are stated, not hidden — that is the difference between a research artifact and a vibe.
 
 ---
 

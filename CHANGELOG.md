@@ -10,7 +10,7 @@ Initial public release.
 
 ### Added
 - **23 `hunt-agent-*` skills + `ai-agent-methodology`** — each is `skills/<name>/SKILL.md`
-  (Agent-Skills markdown with `name`, `description`, `sources`, `validated_against`
+  (Agent-Skills markdown with `name`, `description`, `sources`, `validated_against`, `report_count`
   frontmatter). Every skill carries a stdlib-only **Runnable Probe** and a `# LETHAL WHEN:`
   line tying its output to a gate. Harnesses topic-match on the description; no invocation
   by name. Catalog in `docs/skills.md`.

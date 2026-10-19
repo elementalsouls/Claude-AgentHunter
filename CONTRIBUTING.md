@@ -74,7 +74,7 @@ It runs `scripts/scan_secrets.py` on your staged files. Bypass once (not recomme
 
 ## Testing changes
 
-- `python3 lab/run_lab.py` — the 14 exploit gates must stay 14/14.
+- `python3 lab/run_lab.py` — the 24 exploit gates must stay 24/24.
 - `python3 engine/gates.py` — gate self-check, if you touched the gates.
 - `cd engine && python3 test_arms.py` — the four detection arms' regression tests (DVLA adapter + synthetic fixtures); must stay green if you touch `engine/score.py` or an adapter.
 - `python3 scripts/scan_secrets.py` — repo-wide leak guard (flags, home paths, credential tokens). CI runs it on every push; never commit a real CTF flag, a `/Users/<you>/…` path, or a token.

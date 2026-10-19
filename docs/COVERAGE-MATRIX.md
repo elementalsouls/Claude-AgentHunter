@@ -1,6 +1,6 @@
 # Coverage Matrix — skills × standards
 
-Which skill covers which control, and where the gaps are. IDs per `THREAT-MODEL.md` (verify against `REFERENCES.md`). Status: ✅ shipped · 🟡 partial · 🔲 planned (Phase B).
+Which skill covers which control, and where the gaps are. IDs per `THREAT-MODEL.md` (verify against `REFERENCES.md`). Status: ✅ shipped · 🟡 partial. Phase B is complete — every former-planned skill is shipped (table below).
 
 ## Shipped skills → controls
 
@@ -34,7 +34,7 @@ Agentic column uses the **Threats & Mitigations v1.1 (T1–T17)** IDs; the paral
 
 ## Former Phase B skills (now all shipped)
 
-| Planned skill | Fills | OWASP LLM 2025 | OWASP Agentic | Why it matters |
+| Skill | Status / coverage | OWASP LLM 2025 | OWASP Agentic | Why it matters |
 |---|---|---|---|---|
 | ✅ `hunt-agent-prompt-injection` | **SHIPPED** — direct/indirect/multimodal + multi-turn jailbreaks | **LLM01** | **T6, T2, T1** | the #1 agent risk (was scattered; now a dedicated skill) |
 | ✅ `hunt-agent-output-exfil` | **SHIPPED** — markdown-image zero-click, HTML/XSS, link injection, CSP bypass | LLM05, LLM02 | exfiltration, T15 | primary real-world data-theft path (lethal trifecta) |

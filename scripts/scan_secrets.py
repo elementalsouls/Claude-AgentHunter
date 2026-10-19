@@ -36,7 +36,7 @@ SKIP_EXT = {".png", ".jpg", ".jpeg", ".gif", ".ico", ".pdf", ".woff", ".woff2",
 # (label, regex, allowlist substrings that are known-safe if they appear in a hit)
 PATTERNS = [
     ("real CTF flag value", re.compile(r"flag-[0-9a-f]{6}\b"), ("flag-redacted", "flag-abc123")),
-    ("absolute home path (username leak)", re.compile(r"/(?:Users|home)/[A-Za-z0-9._-]+/"), ()),
+    ("absolute home path (username leak)", re.compile(r"/(?:Users|home)/[A-Za-z0-9._-]+/?"), ()),
     ("AWS access key id", re.compile(r"\b(?:AKIA|ASIA)[0-9A-Z]{16}\b"), ()),
     ("GitHub token", re.compile(r"\bgh[pousr]_[A-Za-z0-9]{36,}\b"), ()),
     ("Slack token", re.compile(r"\bxox[baprs]-[A-Za-z0-9-]{10,}\b"), ()),

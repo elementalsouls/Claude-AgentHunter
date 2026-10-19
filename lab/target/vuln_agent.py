@@ -457,6 +457,19 @@ def _mcp_tool_call(params):
     return {"content": [{"type": "text", "text": "unknown tool"}]}
 
 
+def _reset():
+    # Re-initialise all mutable lab state. run_lab.py restarts the process per suite, but this
+    # makes a SINGLE exploit (or a reordered suite) re-runnable against a long-lived target too —
+    # so the "[CONFIRMED] = re-runnable" promise holds however the exploit is invoked.
+    for lst in (_REDEMPTIONS, _EFFECTS, _LOGIN_ATTEMPTS, _GUARD_LOG, _MEMORY, _MEM_EFFECTS,
+                _A2A_EFFECTS, _SHADOW_LOG):
+        lst.clear()
+    _VOUCHER.update({"code": "ONCE-ONLY", "remaining": 1, "balance": 100})
+    _SETTINGS.clear(); _SETTINGS.update({"require_approval": True})
+    _PENDING.clear()
+    _LAST_TOOL_CALL.clear()
+
+
 class Handler(BaseHTTPRequestHandler):
     def log_message(self, *a):        # quiet
         pass
@@ -555,6 +568,9 @@ class Handler(BaseHTTPRequestHandler):
             return self._reply(_agent_a(data))
         if self.path == "/invoke_tool":
             return self._reply(_invoke_tool(str(data.get("name", "")), str(data.get("arg", ""))))
+        if self.path == "/reset":
+            _reset()
+            return self._reply({"reset": True})
         return self._reply({"error": "unknown tool"}, 404)
 
 
