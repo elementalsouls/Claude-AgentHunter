@@ -60,6 +60,18 @@ PRs and issues welcome.
   value equals the tool action / data / cross-tenant effect it reaches.
 - **Single responsibility**, and cross-reference complementary skills.
 
+## First-time setup (recommended)
+
+Install the pre-commit hook so a leaked flag, home path, or token is blocked before it is
+ever committed (git hooks are not cloned, so this is opt-in):
+
+```sh
+./scripts/install-hooks.sh
+```
+
+It runs `scripts/scan_secrets.py` on your staged files. Bypass once (not recommended):
+`git commit --no-verify`.
+
 ## Testing changes
 
 - `python3 lab/run_lab.py` — the 14 exploit gates must stay 14/14.

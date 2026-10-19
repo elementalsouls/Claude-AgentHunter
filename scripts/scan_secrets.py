@@ -9,11 +9,14 @@ actually bitten this repo or would be fatal to publish:
   - credential tokens: AWS keys, GitHub/Slack tokens, Anthropic/OpenAI keys, private keys
   - a small denylist of specific strings that must never ship (extend as needed)
 
-Run:  python3 scripts/scan_secrets.py      (from the repo root)
+Run:  python3 scripts/scan_secrets.py            # scan every tracked file (CI)
+      python3 scripts/scan_secrets.py <paths...> # scan only these files (pre-commit hook)
 Exit 0 = clean, 1 = one or more hits (printed as GitHub annotations).
 
 This is the single source of truth for leak detection; scripts/lint_skills.py validates
-skill STRUCTURE only and defers secret scanning to here.
+skill STRUCTURE only and defers secret scanning to here. The pre-commit hook
+(scripts/hooks/pre-commit, installed via scripts/install-hooks.sh) passes the staged
+files so a leak is blocked before it is ever committed.
 """
 from __future__ import annotations
 import os
@@ -56,11 +59,12 @@ def tracked_files() -> list[str]:
     return [p for p in out.split("\0") if p]
 
 
-def scan(rel: str) -> None:
+def scan(path: str) -> None:
+    rel = os.path.relpath(os.path.abspath(path), ROOT)
     if rel in SELF or os.path.splitext(rel)[1].lower() in SKIP_EXT:
         return
     try:
-        text = open(os.path.join(ROOT, rel), encoding="utf-8").read()
+        text = open(path, encoding="utf-8").read()
     except (UnicodeDecodeError, OSError):
         return   # binary or unreadable — not a text leak surface
     for i, line in enumerate(text.splitlines(), 1):
@@ -76,12 +80,18 @@ def scan(rel: str) -> None:
 
 
 def main() -> int:
-    files = tracked_files()
-    if not files:
-        print("no tracked files — run from the repo root", file=sys.stderr)
-        return 1
-    for rel in files:
-        scan(rel)
+    args = [a for a in sys.argv[1:] if a != "--"]
+    if args:                                   # pre-commit mode: only the given (staged) files
+        files = args
+        for p in files:
+            scan(p)
+    else:                                      # CI mode: every tracked file
+        files = tracked_files()
+        if not files:
+            print("no tracked files — run from the repo root", file=sys.stderr)
+            return 1
+        for rel in files:
+            scan(os.path.join(ROOT, rel))
     if errors:
         for e in errors:
             print(e)
