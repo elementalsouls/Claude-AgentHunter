@@ -92,6 +92,9 @@ Or as a Claude Code plugin — namespaced, no copy, updates on version bump:
   encodes a vulnerability class and its control; `[CONFIRMED]` means re-runnable, not "the model said so".
 - **`field/`** — evidence from live/benchmark targets: AgentDojo (4 suites, 949 runs, FN 0), DVMCP
   (10/10), DVLA (ReAct forgery → SQL chain), InjecAgent (arm D 7/7 indirect), a real MCP target, ARKX.
+- **`redteam/`** — the **adaptive red-team harness**: evolves injection payloads against a target,
+  control-first, and finds an evasion the static probe misses (`python3 -m redteam guardrail`).
+  Model-optional — deterministic by default, local-LLM generator a pluggable opt-in.
 
 ## Documentation
 
@@ -99,6 +102,7 @@ Or as a Claude Code plugin — namespaced, no copy, updates on version bump:
 - [`INSTALL.md`](INSTALL.md) — plugin + copy install across five harnesses.
 - [`docs/skills.md`](docs/skills.md) — the 23-skill catalog.
 - [`docs/THREAT-MODEL.md`](docs/THREAT-MODEL.md) · [`docs/COVERAGE-MATRIX.md`](docs/COVERAGE-MATRIX.md) · [`docs/RESEARCH-2026.md`](docs/RESEARCH-2026.md) · [`docs/DEFENSES-AND-DETECTION.md`](docs/DEFENSES-AND-DETECTION.md) · [`docs/REFERENCES.md`](docs/REFERENCES.md)
+- [`redteam/README.md`](redteam/README.md) — the adaptive red-team harness.
 - [`CONTRIBUTING.md`](CONTRIBUTING.md) · [`CHANGELOG.md`](CHANGELOG.md)
 
 ## Authorized use only
