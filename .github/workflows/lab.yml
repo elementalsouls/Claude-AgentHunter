@@ -1,0 +1,38 @@
+name: lab
+
+# Deterministic proof gate: every exploit class in lab/ must re-run and pass its
+# gate, with no model and no API key. This is what "[CONFIRMED]" means — re-runnable,
+# not "the model said so". Runs on PRs and pushes to main. Stdlib Python only.
+
+on:
+  pull_request:
+    paths:
+      - "lab/**"
+      - "engine/**"
+      - ".github/workflows/lab.yml"
+  push:
+    branches: [main]
+    paths:
+      - "lab/**"
+      - "engine/**"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  lab:
+    name: Run 14 exploit gates
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Engine gate self-check
+        run: python3 engine/gates.py
+
+      - name: Run the lab (14/14 exploit gates)
+        run: python3 lab/run_lab.py

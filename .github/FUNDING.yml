@@ -1,0 +1,6 @@
+# Funding links shown on the repo's "Sponsor" button.
+# (No `github:` key — elementalsouls isn't enrolled in GitHub Sponsors; an invalid
+#  github: entry makes GitHub reject the whole file and hide the button. Re-add it
+#  here once a GitHub Sponsors profile exists.)
+custom:
+  - "https://paypal.me/elementalsouls"

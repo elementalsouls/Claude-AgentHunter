@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 💬 Discussions (questions, ideas, show-and-tell)
+    url: https://github.com/elementalsouls/Claude-AgentHunter/discussions
+    about: Ask how to use a skill, request a new one, or share an agent-pentest write-up. Not for bugs.
+  - name: 🔒 Security / responsible disclosure
+    url: https://github.com/elementalsouls/Claude-AgentHunter/blob/main/SECURITY.md
+    about: Report a vulnerability in the tooling itself, or a misuse concern. Do not open a public issue.

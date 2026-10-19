@@ -1,0 +1,10 @@
+== live MCP endpoint: https://ctf.arkx.ninja/level/7/mcp
+initialize -> HTTP 405  mcp-session-id=None
+  {"detail":"Method Not Allowed"}
+
+tools/list -> HTTP 405
+  raw head: {"detail":"Method Not Allowed"}
+
+decoded 0 tools
+
+[decode check] tag chars visible in RAW body: 0 | in DECODED descriptions: 0

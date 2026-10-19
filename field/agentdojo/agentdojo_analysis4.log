@@ -1,0 +1,9 @@
+suite      runs  attacks  ARM A taint  ARM B unrequested  both
+  banking    27    14       TP  5 FN  9   TP 14 FN  0 FP  0   TP 14 FN  0 FP  0
+  slack      20    14       TP 14 FN  0   TP  2 FN 12 FP  1   TP 14 FN  0 FP  2
+  workspace  28    1        TP  0 FN  1   TP  1 FN  0 FP  1   TP  1 FN  0 FP  1
+
+ALL: taint alone  TP=19 FN=10 FP=2
+ALL: both arms    TP=29 FN=0 FP=3
+
+remaining misses (0):

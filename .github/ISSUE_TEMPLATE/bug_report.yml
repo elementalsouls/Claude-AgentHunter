@@ -1,0 +1,45 @@
+name: 🐞 Bug / incorrect skill or engine behavior
+description: A skill misfires or fails to trigger, a probe gives wrong guidance, a gate mis-scores, or a script errors.
+title: "[bug] <short summary>"
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting. Please **do not paste real client/engagement data, credentials, or target identifiers** — anonymize everything (see CONTRIBUTING.md).
+  - type: input
+    id: component
+    attributes:
+      label: Which skill / command / engine file?
+      placeholder: "e.g. hunt-agent-prompt-injection, /hunt-agent, engine/score.py, lab/run_lab.py"
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect to happen?
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: What actually happened?
+      description: Include the prompt/command you used and what happened (or didn't). Redact any sensitive data.
+    validations:
+      required: true
+  - type: dropdown
+    id: trigger
+    attributes:
+      label: If a skill — did it auto-trigger?
+      options:
+        - "Yes, it loaded but behaved wrong"
+        - "No, it never triggered when it should have"
+        - "It triggered when it should NOT have"
+        - "N/A — this is an engine/lab/script bug"
+    validations:
+      required: true
+  - type: input
+    id: env
+    attributes:
+      label: Environment
+      placeholder: "Claude Code version, OS, Python version, install method (plugin/copy)"

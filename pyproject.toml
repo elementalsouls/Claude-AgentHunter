@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "claude-agenthunter"
+version = "0.1.0"
+description = "Claude-AgentHunter — runnable engine + 23-skill bundle for red-teaming LLM agents: 4 detection arms, a 14-gate validation lab, and the FP + Negative-Result gates that stop false findings in both directions."
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [{ name = "Sachin Sharma" }]
+keywords = ["ai-agent-security", "prompt-injection", "mcp", "red-team", "llm", "agentic", "pentest"]
+dependencies = []
+
+[project.urls]
+Homepage = "https://github.com/elementalsouls/Claude-AgentHunter"
+Repository = "https://github.com/elementalsouls/Claude-AgentHunter"
+
+# The engine (engine/, lab/) runs as stdlib-only scripts — `python3 lab/run_lab.py`,
+# `python3 engine/score.py ...` — not as an installed package. This file declares
+# project metadata; there is deliberately nothing to build.
+[tool.setuptools]
+py-modules = []

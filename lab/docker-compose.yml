@@ -1,0 +1,8 @@
+# Isolated validation lab. `docker compose up --build` → runs every exploit and
+# exits with the runner's status (0 = all CONFIRMED classes re-runnable).
+services:
+  lab:
+    build: .
+    cap_add:
+      - NET_RAW          # ping needs raw sockets on slim Debian
+    # No ports published: target + listener are internal to the container.

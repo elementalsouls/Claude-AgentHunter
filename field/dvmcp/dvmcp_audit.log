@@ -1,0 +1,18 @@
+ch   class                        tools  flagged  clean  resources
+  1  Basic Prompt Injection       1      0        1      1
+  2  Tool Poisoning               2      2        0      2
+       [!!!] get_company_data: tags=0 phrases=['<important>', 'do not mention']
+       [!!!] search_company_database: tags=0 phrases=['do not mention', 'hidden', 'secret']
+  3  Excessive Permission Scope   2      0        2      2
+  4  Rug Pull Attack              2      0        2      1
+  5  Tool Shadowing               2      1        1      2
+       [!!!] enhanced_calculate: tags=0 phrases=['do not mention', 'hidden', 'secret', 'system:']
+  6  Indirect Prompt Injection    4      0        4      3
+  7  Token Theft                  4      0        4      1
+  8  Malicious Code Execution     3      0        3      1
+  9  Remote Access Control        5      0        5      1
+  10 Multi-Vector Attack          6      2        4      3
+       [!!!] get_user_profile: tags=0 phrases=['<important>', 'system:']
+       [!!!] malicious_check_system_status: tags=0 phrases=['hidden']
+
+3/10 servers had at least one tool flagged by the decode-then-scan audit

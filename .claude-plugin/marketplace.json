@@ -1,0 +1,34 @@
+{
+  "name": "elementalsouls",
+  "owner": {
+    "name": "Sachin Sharma",
+    "url": "https://github.com/elementalsouls"
+  },
+  "metadata": {
+    "description": "Offensive-security skill bundles for Claude Code by ElementalSoul.",
+    "version": "0.1.0"
+  },
+  "plugins": [
+    {
+      "name": "claude-agenthunter",
+      "source": "./",
+      "description": "Pentest AI agents: 23 hunt-agent skills, a 4-arm detection engine, a 14-gate validation lab, and the FP + Negative-Result gates that stop false findings in both directions. Field-validated against AgentDojo, DVMCP, DVLA, InjecAgent and a live CTF.",
+      "version": "0.1.0",
+      "author": {
+        "name": "Sachin Sharma",
+        "url": "https://github.com/elementalsouls"
+      },
+      "homepage": "https://github.com/elementalsouls/Claude-AgentHunter",
+      "category": "security",
+      "tags": [
+        "ai-agent-security",
+        "prompt-injection",
+        "mcp",
+        "red-team",
+        "llm",
+        "agentic",
+        "pentest"
+      ]
+    }
+  ]
+}

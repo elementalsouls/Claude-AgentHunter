@@ -1,0 +1,48 @@
+# macOS
+.DS_Store
+._*
+
+# Claude Code per-project settings (auto-generated)
+.claude/
+
+# Editor backups
+*~
+*.swp
+*.swo
+.vscode/
+.idea/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+.pytest_cache/
+build/
+dist/
+*.egg-info/
+
+# Node (if anyone adds tooling later)
+node_modules/
+
+# Secrets — NEVER commit (the lab flag in lab/secret.txt is a deliberate, non-reusable marker)
+.env
+.env.local
+*.pem
+*.key
+*-credentials.json
+
+# Engagement artifacts — NEVER commit (live-target evidence belongs in your working dir, not the repo)
+evidence/
+findings/
+submissions.txt
+notes.md
+targets/
+CLAUDE.md.local
+
+# NOTE: lab/ and field/ *.log files ARE committed on purpose — they are the
+# re-runnable proof the README cites. Do not add a blanket *.log ignore here.
+
+# Local-only
+.obsidian/
+graphify-out/

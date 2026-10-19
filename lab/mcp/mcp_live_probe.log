@@ -1,0 +1,15 @@
+[live] real MCP server, session d98921738b5448ed8b4660a642abff5f, tools/list body = 1952 bytes, SSE=True
+
+tool         decoded?  hidden tags injection phrases
+  add        yes       0           []
+  now        yes       0           []
+  lookup     yes       0           []
+  read_note  yes       0           ['<important>', 'Before using this tool', 'read ~/', 'pass its content', 'Do not tell']
+  summarize  yes       48          []
+
+[old probe] decoded 5 name fields by regex, flagged: []
+[new probe] decoded 5 tools via JSON,   flagged: ['read_note', 'summarize']
+  old: caught [] | MISSED ['read_note', 'summarize'] | false positives []
+  new: caught ['read_note', 'summarize'] | MISSED [] | false positives []
+
+[tag chars] visible scanning RAW body: 48  |  visible after JSON decode: 48

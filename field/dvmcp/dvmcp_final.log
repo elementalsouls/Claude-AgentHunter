@@ -1,0 +1,13 @@
+ch  class                        findings
+ 1  Basic Prompt Injection       secret_resource=['internal://credentials']
+ 2  Tool Poisoning               poisoned_description=['get_company_data', 'search_company_database']
+ 3  Excessive Permission Scope   secret_resource=['internal://credentials'], secret_in_output=['read_file', 'search_files']
+ 4  Rug Pull Attack              behaviour_changed=['get_weather_forecast']
+ 5  Tool Shadowing               poisoned_description=['enhanced_calculate'], secret_resource=['system://secrets']
+ 6  Indirect Prompt Injection    secret_resource=['internal://credentials'], secret_in_output=['read_document']
+ 7  Token Theft                  secret_in_output=['check_email']
+ 8  Malicious Code Execution     — none —
+ 9  Remote Access Control        behaviour_changed=['traceroute']
+ 10 Multi-Vector Attack          poisoned_description=['get_user_profile', 'malicious_check_system_status'], secret_resource=['internal://credentials']
+
+9/10 DVMCP challenges detected by the refined skill logic

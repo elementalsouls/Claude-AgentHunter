@@ -1,0 +1,16 @@
+== differential sleep: does the delay TRACK the sleep value? ==
+   execution => delta scales with N.  extra model turn => flat regardless of N.
+
+   sleep  0 -> median  4.89s  (n=3, spread 5.47)  resp='Online'
+   sleep  3 -> median  7.24s  (n=3, spread 0.71)  resp='Online'
+   sleep  9 -> median  8.26s  (n=3, spread 0.14)  resp='Offline'
+   sleep 20 -> median  8.20s  (n=3, spread 0.42)  resp='Offline'
+
+   plain control median 4.74s
+   sleep  0: delta +0.15s
+   sleep  3: delta +2.50s
+   sleep  9: delta +3.52s
+   sleep 20: delta +3.47s
+
+   >>> delay across sleep 0..20: +3.32s spread
+   >>> VERDICT: NOT execution — fixed overhead of an extra turn, independent of N
