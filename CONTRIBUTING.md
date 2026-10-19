@@ -65,6 +65,7 @@ PRs and issues welcome.
 - `python3 lab/run_lab.py` — the 14 exploit gates must stay 14/14.
 - `python3 engine/gates.py` — gate self-check, if you touched the gates.
 - `cd engine && python3 test_arms.py` — the four detection arms' regression tests (DVLA adapter + synthetic fixtures); must stay green if you touch `engine/score.py` or an adapter.
+- `python3 scripts/scan_secrets.py` — repo-wide leak guard (flags, home paths, credential tokens). CI runs it on every push; never commit a real CTF flag, a `/Users/<you>/…` path, or a token.
 - `python3 scripts/lint_skills.py` — skill frontmatter + the Runnable-Probe / `# LETHAL WHEN:` invariants, plus a secret scan (leaked flags, home paths, tokens). CI runs it on every skill change.
 - For a skill: install it locally, open a fresh session, describe a test in plain English,
   and confirm the skill auto-triggers and its probe behaves.
