@@ -53,7 +53,7 @@ python3 engine/score.py agentdojo <runs_dir> <suite> --baselines d1,d2
 No model, no API key. Each gate encodes a vulnerability class **and** its control.
 
 ```sh
-python3 lab/run_lab.py        # 14/14 exploit gates — [CONFIRMED] means re-runnable
+python3 lab/run_lab.py        # 21/21 exploit gates — [CONFIRMED] means re-runnable
 ```
 
 Lab environment lives in `lab/` (`target/vuln_agent.py`, `target/oob_listener.py`,

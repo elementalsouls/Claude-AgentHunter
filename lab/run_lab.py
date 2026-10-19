@@ -24,10 +24,14 @@ EXPLOITS = ["exploit_tool_injection.py", "exploit_blind_exfil.py",
             "exploit_info_disclosure.py", "exploit_prompt_extraction.py",
             "exploit_race_condition.py", "exploit_time_gate.py",
             "exploit_hitl_bypass.py",
-            # the seven classes that previously had no lab exercise at all
+            # seven more that previously had no lab exercise at all
             "exploit_brute_force.py", "exploit_crypto.py", "exploit_deserialization.py",
             "exploit_config_poisoning.py", "exploit_native_memory.py", "exploit_rag.py",
-            "exploit_resource_abuse.py"]
+            "exploit_resource_abuse.py",
+            # the final seven reachable REFERENCE classes, weaponised to a re-runnable gate
+            "exploit_auth_bypass.py", "exploit_output_exfil.py", "exploit_guardrail_evasion.py",
+            "exploit_memory_poisoning.py", "exploit_mcp_supply_chain.py", "exploit_mcp_exposure.py",
+            "exploit_multi_agent.py"]
 
 
 _opener = urllib.request.build_opener(urllib.request.ProxyHandler({}))

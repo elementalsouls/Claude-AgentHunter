@@ -9,12 +9,12 @@ Agentic column uses the **Threats & Mitigations v1.1 (T1–T17)** IDs; the paral
 | Skill | OWASP LLM 2025 (2026) | OWASP Agentic (T1–T17) | MAESTRO layer | MITRE ATLAS v5.6.0 | Confirmed |
 |---|---|---|---|---|---|
 | `hunt-agent-prompt-injection` | **LLM01** | **T6, T2**, T1 | L1, L3 | AML.T0051 | 2 |
-| `hunt-agent-output-exfil` | **LLM05**, LLM02 | exfiltration, T15 | L7, L5 | exfil (CWE-79) | 0 (ref) |
-| `hunt-agent-memory-poisoning` | **LLM04**, LLM01/LLM08 | **T1**, T6 | L2, L3 | poisoning/persistence | 0 (ref) |
+| `hunt-agent-output-exfil` | **LLM05**, LLM02 | exfiltration, T15 | L7, L5 | exfil (CWE-79) | lab |
+| `hunt-agent-memory-poisoning` | **LLM04**, LLM01/LLM08 | **T1**, T6 | L2, L3 | poisoning/persistence | lab |
 | `hunt-agent-rag` | **LLM08**, LLM04, LLM01/LLM02 | T1, T2 | L2, L1 | poisoning/repo-access | 0 (ref) |
 | `hunt-agent-guardrail-evasion` | **LLM01** (inherits unlocked) | **T6**, T1/T2 | L1, L6 | AML.T0054, T0068 | 2 |
 | `hunt-agent-resource-abuse` | **LLM10** | **T4** | L4, L7 | denial-of-ML-service | 0 (ref) |
-| `hunt-agent-mcp-supply-chain` | **LLM03**, LLM01/LLM06 | **T2, T3**, T15 | L3, L7 | supply-chain-compromise | 0 (ref) |
+| `hunt-agent-mcp-supply-chain` | **LLM03**, LLM01/LLM06 | **T2, T3**, T15 | L3, L7 | supply-chain-compromise | lab |
 | `hunt-agent-hitl-bypass` | **LLM06**, LLM01 | **T10, T15** | L6, L7 | oversight-gap | 0 (ref) |
 | `hunt-agent-tool-injection` | LLM05 (LLM01 if prompt-enabled) | T2 Tool Misuse, T11 RCE | L3, L4 | AML.T0053 | 5 |
 | `hunt-agent-blind-exfil` | LLM05 | T2, exfiltration | L3, L5 | AML.T0053, T0057, T0025 | 3 |

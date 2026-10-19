@@ -22,7 +22,7 @@ Initial public release.
 - **The two gates** (`engine/gates.py`) — the **False-Positive gate** (a fluent answer looks
   identical to a real leak) and the **Negative-Result gate** (a silent probe looks identical
   to a secure target). Both ship in every skill.
-- **14-gate validation lab** (`lab/`) — deterministic exploit gates, no model and no API key
+- **21-gate validation lab** (`lab/`) — deterministic exploit gates, no model and no API key
   (`python3 lab/run_lab.py`). Each encodes a vulnerability class and its control;
   `[CONFIRMED]` means re-runnable.
 - **Field evidence** (`field/`) — AgentDojo (4 suites, 949 runs, FN 0), DVMCP (10/10), DVLA
@@ -32,7 +32,7 @@ Initial public release.
   `.claude-plugin/plugin.json` + `.claude-plugin/marketplace.json`.
 - **`/hunt-agent` command** — the 5-step agent-pentest workflow (characterize → select →
   probe → score → gate).
-- **Repo scaffolding** — `.github/` issue/PR templates + `lab` CI workflow (runs the 14 gates
+- **Repo scaffolding** — `.github/` issue/PR templates + `lab` CI workflow (runs the 21 gates
   on every PR), `.gitignore`, `.gitattributes`, `pyproject.toml`, `CONTRIBUTING.md`,
   `USAGE.md`.
 

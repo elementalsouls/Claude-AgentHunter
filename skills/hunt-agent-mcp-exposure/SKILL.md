@@ -3,7 +3,7 @@ name: hunt-agent-mcp-exposure
 description: "MCP (Model Context Protocol) exposure in AI agents: direct resource access, tool enumeration, missing auth, session/Origin issues, protocol-level abuse, and the delegated-identity OAuth flows an MCP proxy runs — confused-deputy auth-code theft, token passthrough, SSRF via OAuth metadata discovery, and over-broad scopes. Bypass the agent, talk to the resource server directly, or abuse the proxy's OAuth. Verify with a value only the protected side could hold — MCP enumeration is easy to over-claim."
 sources: arkx_ctf(field-validated), owasp_agentic_asi_2026, owasp_llm_top10_2025, mitre_atlas
 report_count: 1
-validated_against: "direct MCP resource read bypassing an 'unlock' gate (ARKX Master of Resources). Origin/session/traversal tests are REFERENCE."
+validated_against: "LAB-CONFIRMED (lab/exploits/exploit_mcp_exposure.py): an unauthenticated JSON-RPC resources/read returned a protected resource value; control: initialize returned a session, proving reachability. direct MCP resource read bypassing an 'unlock' gate (ARKX Master of Resources). Origin/session/traversal tests are REFERENCE."
 ---
 
 # Hunt Agent MCP Exposure

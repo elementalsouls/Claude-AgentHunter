@@ -1,6 +1,6 @@
 {
   "name": "claude-agenthunter",
-  "description": "Pentest AI agents: 23 hunt-agent skills, a 4-arm detection engine, a 14-gate validation lab, and the two gates that stop false findings in both directions. Field-validated against AgentDojo, DVMCP, DVLA, InjecAgent and a live CTF.",
+  "description": "Pentest AI agents: 23 hunt-agent skills, a 4-arm detection engine, a 21-gate validation lab, and the two gates that stop false findings in both directions. Field-validated against AgentDojo, DVMCP, DVLA, InjecAgent and a live CTF.",
   "version": "0.1.0",
   "author": {
     "name": "Sachin Sharma",
