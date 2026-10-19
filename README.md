@@ -86,6 +86,28 @@ Or as a Claude Code plugin — namespaced, no copy, updates on version bump:
 /plugin install claude-agenthunter@elementalsouls
 ```
 
+## Runs on multiple agent harnesses
+
+The skills are plain [Agent Skills](https://docs.claude.com/en/docs/claude-code/skills) — the same
+`SKILL.md` format that Claude Code · OpenCode · OpenAI Codex CLI · Hermes Agent · Google AntiGravity
+all load. One command installs them everywhere:
+
+```sh
+./scripts/install.sh --all
+```
+
+| harness | target skill directory | flag |
+|---|---|---|
+| **Claude Code** (baseline) | `~/.claude/skills/` | *(default)* |
+| **OpenCode** | reads `~/.claude/skills/` & `~/.agents/skills/` | *(default)* \| `--agents` |
+| **OpenAI Codex CLI** | `~/.agents/skills/` | `--agents` |
+| **Hermes Agent** | `~/.hermes/skills/` | `--hermes` |
+| **Google AntiGravity** | `~/.gemini/config/skills/` | `--antigravity` |
+
+`--all` detects the installed harnesses and copies the skills to each path. The full **knowledge**
+layer (24 skills) ports to all five; the slash commands and the `engine/`, `lab/`, `redteam/` tooling
+stay Claude-Code / standalone by design.
+
 ## Proof it works — `lab/` and `field/`
 
 - **`lab/`** — 24 deterministic exploit gates (`python3 lab/run_lab.py`), no model, no API key. Each

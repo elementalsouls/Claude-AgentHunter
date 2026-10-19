@@ -12,18 +12,20 @@ Manifests: `.claude-plugin/plugin.json` + `.claude-plugin/marketplace.json`.
 ```sh
 ./scripts/install.sh --all
 ```
-Detects which harness config dirs exist and copies `skills/*/` into each:
+Detects which harnesses are installed and copies `skills/*/` into each — same routing as the
+sibling Claude-BugHunter (the verified convention):
 
-| harness | skills dir |
-|---|---|
-| Claude Code | `~/.claude/skills/` |
-| OpenCode | `~/.config/opencode/skills/` |
-| Hermes | `~/.hermes/skills/` |
-| Codex CLI | `~/.codex/skills/` |
-| AntiGravity | `~/.antigravity/skills/` |
+| harness | target skill dir | flag |
+|---|---|---|
+| Claude Code (baseline) | `~/.claude/skills/` | *(default)* |
+| OpenCode | reads `~/.claude/skills/` & `~/.agents/skills/` | *(default)* \| `--agents` |
+| OpenAI Codex CLI | `~/.agents/skills/` | `--agents` |
+| Hermes Agent | `~/.hermes/skills/` | `--hermes` |
+| Google AntiGravity | `~/.gemini/config/skills/` | `--antigravity` |
 
-Only the Claude Code path is verified here; the others are best-known defaults. If a harness reads
-skills from elsewhere, point it there and re-run with the single-harness flag (`--opencode`, etc.).
+The skills port to all five. The slash commands and the engine/lab stay Claude-Code / standalone
+by design. Only the Claude Code path is verified end-to-end here; if a harness reads skills from
+elsewhere, point it there and re-run with the single-harness flag.
 
 ## Engine (standalone, no harness)
 ```sh
