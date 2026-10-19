@@ -1,0 +1,36 @@
+name: skill-lint
+
+# Structure + safety gate for every skill change. Validates SKILL.md frontmatter
+# and the two house invariants (Runnable Probe, # LETHAL WHEN:), and scans
+# skills/**/*.md for leaked CTF flags, home-path username leaks, and credential
+# tokens. Stdlib Python only — no dependencies, no network.
+
+on:
+  pull_request:
+    paths:
+      - "skills/**"
+      - "scripts/lint_skills.py"
+      - ".github/workflows/skill-lint.yml"
+  push:
+    branches: [main]
+    paths:
+      - "skills/**"
+      - "scripts/lint_skills.py"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  lint:
+    name: Lint skills (structure + secret scan)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Validate skills
+        run: python3 scripts/lint_skills.py

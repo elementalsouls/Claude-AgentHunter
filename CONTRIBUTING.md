@@ -64,6 +64,7 @@ PRs and issues welcome.
 
 - `python3 lab/run_lab.py` — the 14 exploit gates must stay 14/14.
 - `python3 engine/gates.py` — gate self-check, if you touched the gates.
+- `python3 scripts/lint_skills.py` — skill frontmatter + the Runnable-Probe / `# LETHAL WHEN:` invariants, plus a secret scan (leaked flags, home paths, tokens). CI runs it on every skill change.
 - For a skill: install it locally, open a fresh session, describe a test in plain English,
   and confirm the skill auto-triggers and its probe behaves.
 - **Judge a tuning change by whether a genuine detection dropped, not by the FP count**

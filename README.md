@@ -15,6 +15,10 @@ different quarry. BugHunter hunts web apps; Claude-AgentHunter hunts the agents 
 24 skills   ·   4 detection arms   ·   14/14 lab gates   ·   7 lab environments   ·   FN 0 over 949 runs
 ```
 
+## What is this
+
+A drop-in skill bundle for the [Claude Code skills system](https://docs.claude.com/en/docs/claude-code/skills) (and OpenCode, Hermes, Codex CLI, AntiGravity). Install once and the harness stops guessing at agent security and starts running a disciplined pentest: it fingerprints the target agent, picks the right `hunt-agent-*` skills by surface, runs their stdlib-only probes, scores the traces with a 4-arm engine, and gates every finding so a fluent answer never ships as a leak and a silent probe never ships as "clean". Describe the target in plain English and the relevant skills auto-load — no invocation by name. The whole flow runs as one command, `/hunt-agent`, or stage by stage (see [Commands](#commands)).
+
 ## Why it exists
 
 An agent generates text; it does not retrieve state. That creates two failure modes a web pentest
@@ -32,7 +36,8 @@ every skill.
 ## How the skills work
 
 Each skill is `skills/<name>/SKILL.md` — Agent-Skills markdown with frontmatter (`name`,
-`description`, `sources`, `validated_against`). Harnesses topic-match on the description; describing
+`description`, `sources`, `validated_against`, `report_count` — the count of in-house field-validated
+reports behind the skill, 0 for reference-only). Harnesses topic-match on the description; describing
 your test in plain English loads the relevant skills, no explicit invocation. Unlike static
 methodology skills, each one carries a **Runnable Probe** that executes against a live agent and a
 **`# LETHAL WHEN:`** line tying its output to the gate. Catalog: [`docs/skills.md`](docs/skills.md).
@@ -55,6 +60,18 @@ only when all arms agree **and their controls fired**.
 ```sh
 python3 engine/score.py agentdojo <runs_dir> <suite> --baselines d1,d2
 ```
+
+## Commands
+
+The pipeline runs end to end as `/hunt-agent`, or one stage at a time:
+
+| command | stage |
+|---|---|
+| `/characterize-agent <target>` | fingerprint visibility · allowlist · egress · oracle · auth — before any payload |
+| `/hunt-agent <target>` | full workflow: characterize → select skills → probe → score → gate |
+| `/score-agent <runs_dir> <suite>` | run the 4 detection arms over captured traces + apply the gates |
+| `/validate-agent` | gate one finding through the FP + Negative-Result gates |
+| `/report-agent` | write the submission-ready finding, scored by the sink it reached |
 
 ## Install
 
