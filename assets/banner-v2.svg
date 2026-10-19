@@ -1,142 +1,173 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 800" width="1920" height="800" role="img" aria-label="Claude-AgentHunter - cross-harness Agent Skills for AI-agent red-team and pentest work" font-family="-apple-system,BlinkMacSystemFont,Inter,Segoe UI,sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 800" width="1920" height="800" role="img" aria-label="Claude-AgentHunter - cross-harness Agent Skills for red-teaming LLM agents">
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#08080d"/>
-      <stop offset="0.55" stop-color="#101018"/>
-      <stop offset="1" stop-color="#0c1117"/>
+      <stop offset="0%" stop-color="#08080d"/>
+      <stop offset="58%" stop-color="#101018"/>
+      <stop offset="100%" stop-color="#0c1117"/>
     </linearGradient>
-    <radialGradient id="hot" cx="0.16" cy="0.30" r="0.55">
-      <stop offset="0" stop-color="#ff2d4f" stop-opacity="0.26"/>
-      <stop offset="1" stop-color="#ff2d4f" stop-opacity="0"/>
+    <radialGradient id="hot" cx="20%" cy="28%" r="46%">
+      <stop offset="0%" stop-color="#ff2d4f" stop-opacity="0.26"/>
+      <stop offset="58%" stop-color="#ff2d4f" stop-opacity="0.06"/>
+      <stop offset="100%" stop-color="#ff2d4f" stop-opacity="0"/>
     </radialGradient>
-    <radialGradient id="cool" cx="0.88" cy="0.82" r="0.55">
-      <stop offset="0" stop-color="#4cc9f0" stop-opacity="0.12"/>
-      <stop offset="1" stop-color="#4cc9f0" stop-opacity="0"/>
+    <radialGradient id="cool" cx="82%" cy="18%" r="42%">
+      <stop offset="0%" stop-color="#4cc9f0" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#4cc9f0" stop-opacity="0"/>
     </radialGradient>
-    <pattern id="grid" width="60" height="60" patternUnits="userSpaceOnUse">
-      <path d="M60 0H0V60" fill="none" stroke="#202230" stroke-width="1" stroke-opacity="0.5"/>
+    <pattern id="grid" x="0" y="0" width="60" height="60" patternUnits="userSpaceOnUse">
+      <path d="M60 0H0V60" fill="none" stroke="#202230" stroke-width="0.7" opacity="0.5"/>
     </pattern>
-    <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
-      <feGaussianBlur stdDeviation="7" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    <filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
     </filter>
     <style>
-      .mono{font-family:ui-monospace,JetBrains Mono,IBM Plex Mono,SF Mono,monospace}
-      .w{fill:#f7f7fb}.r{fill:#ff2d4f}.c{fill:#4cc9f0}.a{fill:#f6b44b}.m{fill:#9a9aa8}.d{fill:#5f6070}
+      .sans{font-family:-apple-system,BlinkMacSystemFont,"Inter","Segoe UI",sans-serif}
+      .mono{font-family:ui-monospace,"JetBrains Mono","IBM Plex Mono","SF Mono",Menlo,monospace}
+      .muted{fill:#9a9aa8}
+      .dim{fill:#5f6070}
+      .white{fill:#f7f7fb}
+      .red{fill:#ff2d4f}
+      .cyan{fill:#4cc9f0}
+      .amber{fill:#f6b44b}
     </style>
   </defs>
 
-  <!-- background -->
   <rect width="1920" height="800" fill="url(#bg)"/>
   <rect width="1920" height="800" fill="url(#grid)"/>
   <rect width="1920" height="800" fill="url(#hot)"/>
   <rect width="1920" height="800" fill="url(#cool)"/>
-  <rect x="0.5" y="0.5" width="1919" height="799" fill="none" stroke="#22242e" stroke-width="1"/>
 
-  <!-- header metadata row -->
-  <g class="mono" font-size="15" letter-spacing="2">
-    <text x="64" y="56" class="m">CLAUDE / HUNT-AGENT</text>
-    <text x="308" y="56" class="d">·</text>
-    <text x="330" y="56" class="r">MAIN</text>
-    <text x="392" y="56" class="d">·</text>
-    <text x="414" y="56" class="m">AI-AGENT RED-TEAM SKILLS</text>
-    <text x="1856" y="56" class="d" text-anchor="end">github.com/elementalsouls</text>
+  <!-- meta row -->
+  <g class="mono" font-size="12" letter-spacing="2.2">
+    <text x="80" y="52" class="dim">CLAUDE-AGENTHUNTER / MAIN / CROSS-HARNESS AGENT SKILLS</text>
+    <text x="1840" y="52" text-anchor="end" class="muted">github.com/elementalsouls/Claude-AgentHunter</text>
   </g>
-  <line x1="64" y1="78" x2="1856" y2="78" stroke="#22242e"/>
+  <line x1="80" y1="72" x2="1840" y2="72" stroke="#1d1f2b"/>
 
-  <!-- logo: reticle targeting an agent node linked to tool nodes -->
-  <g transform="translate(150,210)" filter="url(#glow)">
-    <circle r="66" fill="none" stroke="#ff2d4f" stroke-width="2.5" stroke-opacity="0.9"/>
-    <circle r="44" fill="none" stroke="#ff2d4f" stroke-width="1.2" stroke-opacity="0.5"/>
-    <line x1="-84" y1="0" x2="-58" y2="0" stroke="#ff2d4f" stroke-width="2.5"/>
-    <line x1="58" y1="0" x2="84" y2="0" stroke="#ff2d4f" stroke-width="2.5"/>
-    <line x1="0" y1="-84" x2="0" y2="-58" stroke="#ff2d4f" stroke-width="2.5"/>
-    <line x1="0" y1="58" x2="0" y2="84" stroke="#ff2d4f" stroke-width="2.5"/>
-    <!-- agent core -->
-    <circle r="13" class="c" fill-opacity="0.9"/>
+  <!-- logo mark : reticle + agent-tool graph, 150px -->
+  <g transform="translate(80 172) scale(1.5)" filter="url(#glow)">
+    <circle cx="50" cy="50" r="42" fill="none" stroke="#ff2d4f" stroke-width="2.5"/>
+    <circle cx="50" cy="50" r="31" fill="none" stroke="#ff2d4f" stroke-width="1" opacity="0.35" stroke-dasharray="3 5"/>
+    <g stroke="#ff2d4f" stroke-width="3" stroke-linecap="round">
+      <line x1="50" y1="1" x2="50" y2="15"/>
+      <line x1="50" y1="85" x2="50" y2="99"/>
+      <line x1="1" y1="50" x2="15" y2="50"/>
+      <line x1="85" y1="50" x2="99" y2="50"/>
+    </g>
+    <!-- agent → tool edges -->
+    <g stroke="#4cc9f0" stroke-width="2" stroke-opacity="0.75" stroke-linecap="round">
+      <line x1="50" y1="50" x2="32" y2="37"/>
+      <line x1="50" y1="50" x2="69" y2="41"/>
+      <line x1="50" y1="50" x2="64" y2="67"/>
+      <line x1="50" y1="50" x2="35" y2="66"/>
+    </g>
     <!-- tool nodes -->
-    <g stroke="#4cc9f0" stroke-width="1.6" stroke-opacity="0.7">
-      <line x1="0" y1="0" x2="-30" y2="-22"/><line x1="0" y1="0" x2="32" y2="-16"/><line x1="0" y1="0" x2="24" y2="28"/><line x1="0" y1="0" x2="-26" y2="26"/>
+    <g fill="#f6b44b">
+      <circle cx="32" cy="37" r="4.5"/>
+      <circle cx="69" cy="41" r="4.5"/>
+      <circle cx="64" cy="67" r="4.5"/>
+      <circle cx="35" cy="66" r="4.5"/>
     </g>
-    <g class="a">
-      <circle cx="-30" cy="-22" r="6"/><circle cx="32" cy="-16" r="6"/><circle cx="24" cy="28" r="6"/><circle cx="-26" cy="26" r="6"/>
-    </g>
+    <!-- agent core -->
+    <circle cx="50" cy="50" r="8" fill="#4cc9f0"/>
+    <circle cx="50" cy="50" r="8" fill="none" stroke="#0a0a10" stroke-width="1.4"/>
   </g>
 
-  <!-- title -->
-  <g transform="translate(258,168)">
-    <text x="0" y="70" font-size="104" font-weight="800" letter-spacing="-2">
-      <tspan class="w">claude</tspan><tspan class="d">/</tspan><tspan class="r">hunt-agent</tspan>
-    </text>
-    <rect x="2" y="92" width="742" height="5" class="r"/>
-    <text x="2" y="140" class="mono m" font-size="21" letter-spacing="1">
-      Attack the agent through its TOOLS — the LLM is middleware, the tools are the sink.
-    </text>
+  <!-- title lockup -->
+  <g class="sans" font-weight="800">
+    <text x="290" y="262" font-size="116" letter-spacing="-2" class="white" textLength="380" lengthAdjust="spacingAndGlyphs">claude</text>
+    <text x="716" y="262" font-size="116" font-weight="300" class="dim">/</text>
+    <text x="782" y="262" font-size="116" letter-spacing="-2" class="red" filter="url(#glow)" textLength="600" lengthAdjust="spacingAndGlyphs">hunt-agent</text>
   </g>
+  <line x1="784" y1="296" x2="1384" y2="296" stroke="#ff2d4f" stroke-width="3"/>
 
   <!-- feature chips -->
-  <g transform="translate(258,372)" class="mono" font-size="16" font-weight="600" letter-spacing="1">
-    <g>
-      <rect x="0" y="0" width="272" height="44" rx="6" fill="#ff2d4f" fill-opacity="0.10" stroke="#ff2d4f" stroke-opacity="0.55"/>
-      <text x="20" y="28" class="r">AGENT TOOL EXPLOITATION</text>
-    </g>
-    <g transform="translate(292,0)">
-      <rect x="0" y="0" width="212" height="44" rx="6" fill="#ff2d4f" fill-opacity="0.10" stroke="#ff2d4f" stroke-opacity="0.55"/>
-      <text x="20" y="28" class="r">MCP / A2A ATTACKS</text>
-    </g>
-    <g transform="translate(524,0)">
-      <rect x="0" y="0" width="224" height="44" rx="6" fill="#ff2d4f" fill-opacity="0.10" stroke="#ff2d4f" stroke-opacity="0.55"/>
-      <text x="20" y="28" class="r">RUNNABLE PROBES</text>
-    </g>
+  <g class="mono" font-size="14" font-weight="700" letter-spacing="2.4">
+    <text x="290" y="336" class="white"><tspan class="red">+ </tspan>AGENT TOOL EXPLOITATION</text>
+    <text x="700" y="336" class="white"><tspan class="red">+ </tspan>MCP / A2A ATTACKS</text>
+    <text x="1030" y="336" class="white"><tspan class="red">+ </tspan>RUNNABLE PROBES</text>
   </g>
+  <text x="290" y="384" class="mono muted" font-size="19" letter-spacing="0.2">23 skills for red-teaming LLM agents - chatbots, RAG, tool-calling copilots, MCP servers, and ReAct agents.</text>
 
   <!-- spec card -->
-  <g transform="translate(1480,140)">
-    <rect x="0" y="0" width="376" height="238" rx="10" fill="#0d0e15" stroke="#ff2d4f" stroke-opacity="0.45"/>
-    <text x="22" y="42" class="mono r" font-size="14" letter-spacing="2">// SKILL BUNDLE</text>
-    <g class="mono" font-size="15">
-      <text x="22" y="82" class="m">channel</text><text x="354" y="82" class="w" text-anchor="end">Claude Code / skills</text>
-      <text x="22" y="112" class="m">contract</text><text x="354" y="112" class="w" text-anchor="end">_CONTRACT.md · gates.py</text>
-      <text x="22" y="142" class="m">taxonomy</text><text x="354" y="142" class="c" text-anchor="end">OWASP · ASI · ATLAS v5.6</text>
-      <text x="22" y="172" class="m">author</text><text x="354" y="172" class="w" text-anchor="end">Sachin Sharma</text>
-      <text x="22" y="202" class="m">updated</text><text x="354" y="202" class="a" text-anchor="end">2026-10</text>
-    </g>
+  <g class="mono">
+    <rect x="1480" y="140" width="360" height="140" rx="6" fill="#0b0c12" stroke="#ff2d4f" stroke-width="1.4"/>
+    <circle cx="1506" cy="168" r="5" fill="#ff2d4f"/>
+    <text x="1522" y="173" font-size="13" font-weight="800" letter-spacing="2.5" class="red">SKILL BUNDLE</text>
+    <line x1="1504" y1="190" x2="1816" y2="190" stroke="#2a2c3a"/>
+    <text x="1504" y="215" font-size="11" letter-spacing="2" class="dim">CHANNEL</text>
+    <text x="1816" y="215" text-anchor="end" font-size="12" class="white">Claude Code / skills</text>
+    <text x="1504" y="239" font-size="11" letter-spacing="2" class="dim">AUTHOR</text>
+    <text x="1816" y="239" text-anchor="end" font-size="12" class="white">Sachin Sharma</text>
+    <text x="1504" y="263" font-size="11" letter-spacing="2" class="dim">UPDATED</text>
+    <text x="1816" y="263" text-anchor="end" font-size="12" class="white">2026-10 - MIT</text>
   </g>
 
-  <!-- changes / feature blocks -->
-  <g transform="translate(258,470)" class="mono" font-size="15.5">
-    <g>
-      <text x="0" y="0" class="r" font-weight="700">&gt;</text><text x="22" y="0" class="w">characterize-first methodology</text>
-      <text x="22" y="24" class="m">visibility · allowlist · egress · oracle · auth/tenancy before payloads</text>
-    </g>
-    <g transform="translate(560,0)">
-      <text x="0" y="0" class="r" font-weight="700">&gt;</text><text x="22" y="0" class="w">FP gate + Negative-Result gate</text>
-      <text x="22" y="24" class="m">generated text ≠ retrieved state — OOB-or-it-didn't-happen</text>
-    </g>
-    <g transform="translate(0,64)">
-      <text x="0" y="0" class="r" font-weight="700">&gt;</text><text x="22" y="0" class="w">self-contained runnable probes</text>
-      <text x="22" y="24" class="m">stdlib-only, copy-paste, each ends in # LETHAL WHEN:</text>
-    </g>
-    <g transform="translate(560,64)">
-      <text x="0" y="0" class="r" font-weight="700">&gt;</text><text x="22" y="0" class="w">research-backed, cited</text>
-      <text x="22" y="24" class="m">papers + CVEs verified to primary source — RESEARCH-2026.md</text>
+  <!-- what's inside -->
+  <g class="mono" transform="translate(80 446)">
+    <text x="0" y="0" font-size="11" letter-spacing="3" font-weight="800" class="dim">WHAT'S INSIDE</text>
+    <line x1="170" y1="-4" x2="1760" y2="-4" stroke="#1d1f2b"/>
+    <g font-size="13">
+      <text x="0" y="40" class="red" font-weight="800">&gt;</text>
+      <text x="24" y="40" class="white" font-weight="800" letter-spacing="1.5">FOUR DETECTION ARMS</text>
+      <text x="24" y="60" class="muted">taint · unrequested action · output echo · provenance</text>
+
+      <text x="600" y="40" class="red" font-weight="800">&gt;</text>
+      <text x="624" y="40" class="white" font-weight="800" letter-spacing="1.5">FP + NEGATIVE-RESULT GATES</text>
+      <text x="624" y="60" class="muted">generated text != retrieved state — in every skill</text>
+
+      <text x="1200" y="40" class="red" font-weight="800">&gt;</text>
+      <text x="1224" y="40" class="white" font-weight="800" letter-spacing="1.5">14-GATE VALIDATION LAB</text>
+      <text x="1224" y="60" class="muted">no model, no API key — re-runnable</text>
+
+      <text x="0" y="96" class="red" font-weight="800">&gt;</text>
+      <text x="24" y="96" class="white" font-weight="800" letter-spacing="1.5">CHARACTERIZE-FIRST</text>
+      <text x="24" y="116" class="muted">visibility · allowlist · egress · oracle · auth</text>
+
+      <text x="600" y="96" class="red" font-weight="800">&gt;</text>
+      <text x="624" y="96" class="white" font-weight="800" letter-spacing="1.5">SELF-CONTAINED PROBES</text>
+      <text x="624" y="116" class="muted">stdlib-only, each ends in # LETHAL WHEN:</text>
+
+      <text x="1200" y="96" class="red" font-weight="800">&gt;</text>
+      <text x="1224" y="96" class="white" font-weight="800" letter-spacing="1.5">FIELD-VALIDATED</text>
+      <text x="1224" y="116" class="muted">AgentDojo · DVMCP · DVLA · InjecAgent · CTF</text>
     </g>
   </g>
 
   <!-- stats band -->
-  <line x1="64" y1="626" x2="1856" y2="626" stroke="#22242e"/>
-  <g transform="translate(0,672)" text-anchor="middle">
-    <g transform="translate(200,0)"><text class="w" font-size="52" font-weight="800">24</text><text y="30" class="mono m" font-size="14" letter-spacing="1">SKILLS</text></g>
-    <g transform="translate(480,0)"><text class="r" font-size="52" font-weight="800">23</text><text y="30" class="mono m" font-size="14" letter-spacing="1">RUNNABLE PROBES</text></g>
-    <g transform="translate(780,0)"><text class="w" font-size="52" font-weight="800">14</text><text y="30" class="mono m" font-size="14" letter-spacing="1">LAB GATES · 7 ENVS</text></g>
-    <g transform="translate(1100,0)"><text class="c" font-size="52" font-weight="800">4</text><text y="30" class="mono m" font-size="14" letter-spacing="1">DETECTION ARMS</text></g>
-    <g transform="translate(1400,0)"><text class="a" font-size="52" font-weight="800">949</text><text y="30" class="mono m" font-size="14" letter-spacing="1">FIELD RUNS · FN 0</text></g>
-    <g transform="translate(1680,0)"><text class="w" font-size="52" font-weight="800">0</text><text y="30" class="mono m" font-size="14" letter-spacing="1">LAB FAILURES</text></g>
+  <g transform="translate(80 592)">
+    <line x1="0" y1="0" x2="1760" y2="0" stroke="#2a2c3a"/>
+    <line x1="842" y1="0" x2="918" y2="0" stroke="#ff2d4f" stroke-width="3"/>
+    <g class="sans" font-weight="800" text-anchor="middle">
+      <text x="147" y="66" font-size="52" class="red">24</text>
+      <text x="440" y="66" font-size="52" class="red">23</text>
+      <text x="733" y="66" font-size="52" class="red">14</text>
+      <text x="1027" y="66" font-size="52" class="cyan">4</text>
+      <text x="1320" y="66" font-size="52" class="amber">949</text>
+      <text x="1613" y="66" font-size="52" class="white">0</text>
+    </g>
+    <g class="mono" font-size="11" font-weight="800" letter-spacing="3" text-anchor="middle">
+      <text x="147" y="100" class="muted">SKILLS</text>
+      <text x="440" y="100" class="muted">RUNNABLE PROBES</text>
+      <text x="733" y="100" class="muted">LAB GATES · 7 ENVS</text>
+      <text x="1027" y="100" class="muted">DETECTION ARMS</text>
+      <text x="1320" y="100" class="muted">FIELD RUNS · FN 0</text>
+      <text x="1613" y="100" class="muted">LAB FAILURES</text>
+    </g>
   </g>
 
   <!-- terminal -->
-  <g transform="translate(64,712)">
-    <rect x="0" y="0" width="1792" height="60" rx="8" fill="#0a0b10" stroke="#22242e"/>
-    <circle cx="26" cy="30" r="5" fill="#ff2d4f"/><circle cx="46" cy="30" r="5" fill="#f6b44b"/><circle cx="66" cy="30" r="5" fill="#4cc9f0"/>
-    <text x="96" y="36" class="mono" font-size="16"><tspan class="r">$</tspan><tspan class="w" dx="10">python3 lab/run_lab.py</tspan><tspan class="d" dx="18">#</tspan><tspan class="m" dx="10">14/14 exploits passed their gate · characterize → verify → minimum-necessary</tspan></text>
+  <g class="mono" transform="translate(80 700)">
+    <rect x="0" y="0" width="1760" height="76" rx="6" fill="#0b0c12" stroke="#2a2c3a"/>
+    <circle cx="24" cy="19" r="4" fill="#b81e37"/>
+    <circle cx="40" cy="19" r="4" fill="#5f6070"/>
+    <circle cx="56" cy="19" r="4" fill="#5f6070"/>
+    <text x="84" y="23" font-size="11" letter-spacing="1.6" class="dim">agent skills session - ~/.claude/skills + ~/.config/opencode/skills + ~/.hermes/skills</text>
+    <line x1="0" y1="34" x2="1760" y2="34" stroke="#202230"/>
+    <text x="24" y="58" font-size="13" font-weight="800" class="red">&gt;</text>
+    <text x="48" y="58" font-size="13" class="white">python3 lab/run_lab.py</text>
+    <text x="300" y="58" font-size="12" class="dim"># 14/14 exploit gates - no model, no API key, re-runnable</text>
+    <text x="1736" y="58" font-size="12" text-anchor="end" class="red" font-weight="800">SHIP WITH DISCIPLINE</text>
   </g>
 </svg>
