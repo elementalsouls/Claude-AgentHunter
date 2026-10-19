@@ -19,6 +19,7 @@
 - [ ] `python3 lab/run_lab.py` passes locally (14/14 exploit gates).
 - [ ] `python3 scripts/lint_skills.py` passes locally (skill frontmatter + secret scan).
 - [ ] `python3 engine/gates.py` self-check passes if you touched the gates.
+- [ ] `cd engine && python3 test_arms.py` passes if you touched `engine/score.py` or an adapter.
 - [ ] For a **new skill**: a proposal issue was opened and agreed first; `name` is lowercase-hyphen; description ≤ 1024 chars and weaves in trigger keywords; body stays focused; it carries a **Runnable Probe** and a `# LETHAL WHEN:` line.
 - [ ] For a new skill: listed in `docs/skills.md` and the `README.md` catalog, with one worked trigger example.
 - [ ] Sources cited (`sources:` / `validated_against:` frontmatter) for anything adapted from disclosed reports / research.

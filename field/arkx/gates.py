@@ -2,6 +2,10 @@
 
 Every gate here exists because a live run proved the previous version wrong. The comments
 name the run that killed each earlier threshold; don't loosen one without a new measurement.
+
+This is the FROZEN field copy. The canonical versions of injection_verdict and
+extraction_verdict now live in engine/gates.py (as timing_oracle_verdict and
+repeat_extraction_verdict); bypass_verdict's twin is engine/gates.py:invalid_if_control_leaks.
 """
 import re
 from collections import Counter
