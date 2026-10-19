@@ -88,12 +88,17 @@ Or as a Claude Code plugin — namespaced, no copy, updates on version bump:
 
 ## Runs on multiple agent harnesses
 
+![harness routing](assets/harness-routing.svg)
+
 The skills are plain [Agent Skills](https://docs.claude.com/en/docs/claude-code/skills) — the same
 `SKILL.md` format that Claude Code · OpenCode · OpenAI Codex CLI · Hermes Agent · Google AntiGravity
 all load. One command installs them everywhere:
 
 ```sh
+# macOS / Linux
 ./scripts/install.sh --all
+# Windows (PowerShell)
+pwsh ./scripts/install.ps1 -All
 ```
 
 | harness | target skill directory | flag |

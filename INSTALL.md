@@ -10,7 +10,8 @@ Manifests: `.claude-plugin/plugin.json` + `.claude-plugin/marketplace.json`.
 
 ## Copy install (any harness)
 ```sh
-./scripts/install.sh --all
+./scripts/install.sh --all          # macOS / Linux
+pwsh ./scripts/install.ps1 -All     # Windows (PowerShell)
 ```
 Detects which harnesses are installed and copies `skills/*/` into each — same routing as the
 sibling Claude-BugHunter (the verified convention):
