@@ -1,8 +1,12 @@
 # Install
 
 ## Plugin (Claude Code)
-Add via the marketplace; skills install namespaced under `claude-agenthunter:` — no file copying.
-The manifest is `.claude-plugin/plugin.json`.
+```
+/plugin marketplace add elementalsouls/Claude-AgentHunter
+/plugin install claude-agenthunter@elementalsouls
+```
+Skills install namespaced under `claude-agenthunter:` and update on version bump — no file copying.
+Manifests: `.claude-plugin/plugin.json` + `.claude-plugin/marketplace.json`.
 
 ## Copy install (any harness)
 ```sh

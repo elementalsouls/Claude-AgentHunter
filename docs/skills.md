@@ -1,9 +1,10 @@
 # Skills catalog
 
-23 agent-pentest skills. `field-validated` = a CONFIRMED technique proven against a live or lab agent; `reference` = cross-domain, validate per target.
+24 skills — 23 hunt-agent probes + the `ai-agent-methodology` orchestrator. `field-validated` = a CONFIRMED technique proven against a live or lab agent; `reference` = cross-domain, validate per target.
 
 | skill | status | focus |
 |---|---|---|
+| `ai-agent-methodology` | orchestrator | Characterize-first workflow, the two gates, the 4-arm engine — routes to the 23 hunt skills |
 | `hunt-agent-auth-bypass` | field-validated | Authorization bypass in AI-agent tools — role/persona claims, unverifiable named-credentia |
 | `hunt-agent-blind-exfil` | field-validated | Extract data from AI-agent tools that execute but hide output — status-only, exit-code-onl |
 | `hunt-agent-browser-use` | reference | Attacks specific to computer-use and browser agents — agents that see a screen/DOM and act |

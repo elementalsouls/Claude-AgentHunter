@@ -88,7 +88,7 @@
     <text x="700" y="336" class="white"><tspan class="red">+ </tspan>MCP / A2A ATTACKS</text>
     <text x="1030" y="336" class="white"><tspan class="red">+ </tspan>RUNNABLE PROBES</text>
   </g>
-  <text x="290" y="384" class="mono muted" font-size="19" letter-spacing="0.2">23 skills for red-teaming LLM agents - chatbots, RAG, tool-calling copilots, MCP servers, and ReAct agents.</text>
+  <text x="290" y="384" class="mono muted" font-size="19" letter-spacing="0.2">24 skills for red-teaming LLM agents - chatbots, RAG, tool-calling copilots, MCP servers, and ReAct agents.</text>
 
   <!-- spec card -->
   <g class="mono">

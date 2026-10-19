@@ -2,7 +2,7 @@
 
 # claude-agenthunter
 
-> **Pentest AI agents — and prove both the findings and the absences.** A skill bundle plus a runnable engine for red-teaming LLM agents: chatbots, RAG assistants, tool-calling copilots, MCP servers, and autonomous ReAct agents · **23 skills** · 4 detection arms · 14/14 lab gates · 7 lab environments · FN 0 over 949 field runs · loads into Claude Code, OpenCode, Hermes, Codex CLI and AntiGravity.
+> **Pentest AI agents — and prove both the findings and the absences.** A skill bundle plus a runnable engine for red-teaming LLM agents: chatbots, RAG assistants, tool-calling copilots, MCP servers, and autonomous ReAct agents · **24 skills** (23 hunt + methodology) · 4 detection arms · 14/14 lab gates · 7 lab environments · FN 0 over 949 field runs · loads into Claude Code, OpenCode, Hermes, Codex CLI and AntiGravity.
 
 Built by **[Sachin Sharma](https://www.linkedin.com/in/sachinsharma8080/)** — Bug Hunting & GenAI Security Research.
 
@@ -12,7 +12,7 @@ Sibling to [Claude-BugHunter](https://github.com/elementalsouls/Claude-BugHunter
 different quarry. BugHunter hunts web apps; Claude-AgentHunter hunts the agents themselves.
 
 ```
-23 skills   ·   4 detection arms   ·   14/14 lab gates   ·   7 lab environments   ·   FN 0 over 949 runs
+24 skills   ·   4 detection arms   ·   14/14 lab gates   ·   7 lab environments   ·   FN 0 over 949 runs
 ```
 
 ## Why it exists
@@ -63,7 +63,11 @@ git clone https://github.com/elementalsouls/Claude-AgentHunter && cd Claude-Agen
 ./scripts/install.sh --all          # detects Claude Code, OpenCode, Hermes, Codex, AntiGravity
 ./scripts/install.sh --claude       # or one harness
 ```
-Or as a Claude Code plugin via the marketplace (`.claude-plugin/plugin.json`) — namespaced, no copy.
+Or as a Claude Code plugin — namespaced, no copy, updates on version bump:
+```sh
+/plugin marketplace add elementalsouls/Claude-AgentHunter
+/plugin install claude-agenthunter@elementalsouls
+```
 
 ## Proof it works — `lab/` and `field/`
 
