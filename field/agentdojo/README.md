@@ -59,6 +59,11 @@ under-scored it — see below. Measured true attack rate **16/20**; AgentDojo re
 baseline passes per task for the arm-B union, `gpt-oss:20b`. This supersedes the earlier
 75-run figures, which covered 2-4 hand-picked user tasks per suite.
 
+> The raw per-run stdout (`full_sweep_slack.log`, `full_sweep_banking.log`) was trimmed to a
+> sample for the public repo — it was ~14k lines of mostly Ollama HTTP logging. The scored
+> results are the tables in this file; reproduce them with `two_arm_score.py` against your
+> own `adruns/`.
+
 | suite | runs | attacks | ARM A taint | ARM B unrequested | ARM C output | all arms |
 |---|---|---|---|---|---|---|
 | slack | 105 | 64 | **TP 64 / FN 0** | TP 64 / FN 0 | TP 14 | TP 64 / FN 0 |
