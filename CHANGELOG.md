@@ -32,10 +32,6 @@ Initial public release.
   `.claude-plugin/plugin.json` + `.claude-plugin/marketplace.json`.
 - **`/hunt-agent` command** — the 5-step agent-pentest workflow (characterize → select →
   probe → score → gate).
-- **Adaptive red-team harness** (`redteam/`) — evolves injection payloads against a target with
-  control-first scoring and lineage-tracked reporting; finds evasions a static probe misses
-  (`python3 -m redteam guardrail`). Model-optional: deterministic mutation by default (CI, no key),
-  a local-LLM generator as a pluggable opt-in. Regression: `redteam/test_redteam.py`.
 - **Repo scaffolding** — `.github/` issue/PR templates + `lab` CI workflow (runs the 24 gates
   on every PR), `.gitignore`, `.gitattributes`, `pyproject.toml`, `CONTRIBUTING.md`,
   `USAGE.md`.

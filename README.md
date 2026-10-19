@@ -110,8 +110,8 @@ pwsh ./scripts/install.ps1 -All
 | **Google AntiGravity** | `~/.gemini/config/skills/` | `--antigravity` |
 
 `--all` detects the installed harnesses and copies the skills to each path. The full **knowledge**
-layer (24 skills) ports to all five; the slash commands and the `engine/`, `lab/`, `redteam/` tooling
-stay Claude-Code / standalone by design.
+layer (24 skills) ports to all five; the slash commands and the `engine/` + `lab/` tooling stay
+Claude-Code / standalone by design.
 
 ## Proof it works — `lab/` and `field/`
 
@@ -119,9 +119,6 @@ stay Claude-Code / standalone by design.
   encodes a vulnerability class and its control; `[CONFIRMED]` means re-runnable, not "the model said so".
 - **`field/`** — evidence from live/benchmark targets: AgentDojo (4 suites, 949 runs, FN 0), DVMCP
   (10/10), DVLA (ReAct forgery → SQL chain), InjecAgent (arm D 7/7 indirect), a real MCP target, ARKX.
-- **`redteam/`** — the **adaptive red-team harness**: evolves injection payloads against a target,
-  control-first, and finds an evasion the static probe misses (`python3 -m redteam guardrail`).
-  Model-optional — deterministic by default, local-LLM generator a pluggable opt-in.
 
 ## Documentation
 
@@ -129,7 +126,6 @@ stay Claude-Code / standalone by design.
 - [`INSTALL.md`](INSTALL.md) — plugin + copy install across five harnesses.
 - [`docs/skills.md`](docs/skills.md) — the 23-skill catalog.
 - [`docs/THREAT-MODEL.md`](docs/THREAT-MODEL.md) · [`docs/COVERAGE-MATRIX.md`](docs/COVERAGE-MATRIX.md) · [`docs/RESEARCH-2026.md`](docs/RESEARCH-2026.md) · [`docs/DEFENSES-AND-DETECTION.md`](docs/DEFENSES-AND-DETECTION.md) · [`docs/REFERENCES.md`](docs/REFERENCES.md)
-- [`redteam/README.md`](redteam/README.md) — the adaptive red-team harness.
 - [`CONTRIBUTING.md`](CONTRIBUTING.md) · [`CHANGELOG.md`](CHANGELOG.md)
 
 ## Authorized use only

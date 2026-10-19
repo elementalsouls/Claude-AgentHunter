@@ -9,14 +9,12 @@ on:
     paths:
       - "lab/**"
       - "engine/**"
-      - "redteam/**"
       - ".github/workflows/lab.yml"
   push:
     branches: [main]
     paths:
       - "lab/**"
       - "engine/**"
-      - "redteam/**"
   workflow_dispatch:
 
 permissions:
@@ -41,6 +39,3 @@ jobs:
 
       - name: Run the lab (24/24 exploit gates)
         run: python3 lab/run_lab.py
-
-      - name: Adaptive red-team harness regression
-        run: python3 redteam/test_redteam.py

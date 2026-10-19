@@ -60,22 +60,6 @@ Lab environment lives in `lab/` (`target/vuln_agent.py`, `target/oob_listener.py
 `mcp/mcp_target.py`). `lab/secret.txt` holds a deliberate, non-reusable flag
 (`LAB-FLAG-…`) — it is the exfil oracle, not a real secret.
 
-## The adaptive red-team harness — beat the static probe
-
-Static probes test the payloads you thought of; the harness (`redteam/`) **evolves** them.
-It mutates a seed (homoglyph, zero-width, Unicode-Tag, split, …), fires each at a target,
-scores with a control-first oracle, and reports what landed with its lineage — the 2026
-"dynamic red-team" direction, deterministic by default (no key).
-
-```sh
-python3 lab/target/oob_listener.py &  python3 lab/target/vuln_agent.py &   # a target to hit
-python3 -m redteam guardrail          # evolve; add --llm for a local Ollama generator
-python3 redteam/test_redteam.py       # the regression: adaptive beats static, control holds
-```
-
-To red-team a real agent, write a target dict (`send` + control-first `landed`) — see the
-contract atop `redteam/lab_target.py`.
-
 ## Field evidence
 
 Reproducible runs against benchmarks and authorized targets live in `field/`:

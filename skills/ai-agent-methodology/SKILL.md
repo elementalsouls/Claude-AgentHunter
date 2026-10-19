@@ -162,7 +162,7 @@ Pick the channel by what Phase 1 proved: OOB (usually the winner for blind) → 
 ## PART 7 — PROBE INDEX
 Every hunt-agent skill carries a self-contained `## Runnable Probe` (stdlib-only, copy-paste, ends with `# LETHAL WHEN:`). Grab the one for the surface you're on; each produces a discriminating oracle you then escalate to a real sink.
 
-A static probe tests the payloads you thought of. When a guard/denylist blocks the obvious one, switch to the **adaptive harness** (`redteam/`): it evolves mutations of a seed (homoglyph, zero-width, Unicode-Tag, split, …) against the target, control-first, and reports the evasion a single probe missed — `python3 -m redteam <target>`, or write a target dict (`send` + `landed`) for a real agent.
+A static probe tests the payloads you thought of. When a guard/denylist blocks the obvious one, don't stop at the first refusal — mutate the payload (homoglyph, zero-width/Unicode-Tag smuggling, case/split, encoding) and re-fire, keeping a benign control that must NOT land so the oracle stays honest. The evasion a single probe missed is usually one transform away.
 
 Status: **FIELD-FIRED** = validated on a live ARKX agent pod. **UNTESTED** = probe exists but hasn't been fired against a live agent (backed by public research/CVEs, pending field confirmation).
 
