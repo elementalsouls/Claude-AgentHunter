@@ -1,6 +1,6 @@
 ![Claude-AgentHunter banner](assets/banner-v2.svg)
 
-# claude-agenthunter
+# Claude-AgentHunter
 
 > **Pentest AI agents — and prove both the findings and the absences.** A skill bundle plus a runnable engine for red-teaming LLM agents: chatbots, RAG assistants, tool-calling copilots, MCP servers, and autonomous ReAct agents · **24 skills** (23 hunt + methodology) · 4 detection arms · 24/24 lab gates · 7 target environments · FN 0 over 949 field runs · loads into Claude Code, OpenCode, Hermes, Codex CLI and AntiGravity.
 
