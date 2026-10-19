@@ -112,7 +112,7 @@
       <text x="624" y="60" class="muted">generated text != retrieved state — in every skill</text>
 
       <text x="1200" y="40" class="red" font-weight="800">&gt;</text>
-      <text x="1224" y="40" class="white" font-weight="800" letter-spacing="1.5">21-GATE VALIDATION LAB</text>
+      <text x="1224" y="40" class="white" font-weight="800" letter-spacing="1.5">24-GATE VALIDATION LAB</text>
       <text x="1224" y="60" class="muted">no model, no API key — re-runnable</text>
 
       <text x="0" y="96" class="red" font-weight="800">&gt;</text>
@@ -136,7 +136,7 @@
     <g class="sans" font-weight="800" text-anchor="middle">
       <text x="147" y="66" font-size="52" class="red">24</text>
       <text x="440" y="66" font-size="52" class="red">23</text>
-      <text x="733" y="66" font-size="52" class="red">21</text>
+      <text x="733" y="66" font-size="52" class="red">24</text>
       <text x="1027" y="66" font-size="52" class="cyan">4</text>
       <text x="1320" y="66" font-size="52" class="amber">949</text>
       <text x="1613" y="66" font-size="52" class="white">0</text>
@@ -161,7 +161,7 @@
     <line x1="0" y1="34" x2="1760" y2="34" stroke="#202230"/>
     <text x="24" y="58" font-size="13" font-weight="800" class="red">&gt;</text>
     <text x="48" y="58" font-size="13" class="white">python3 lab/run_lab.py</text>
-    <text x="300" y="58" font-size="12" class="dim"># 21/21 exploit gates - no model, no API key, re-runnable</text>
+    <text x="300" y="58" font-size="12" class="dim"># 24/24 exploit gates - no model, no API key, re-runnable</text>
     <text x="1736" y="58" font-size="12" text-anchor="end" class="red" font-weight="800">SHIP WITH DISCIPLINE</text>
   </g>
 </svg>

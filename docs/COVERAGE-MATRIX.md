@@ -45,6 +45,23 @@ Agentic column uses the **Threats & Mitigations v1.1 (T1–T17)** IDs; the paral
 | ✅ `hunt-agent-guardrail-evasion` | **SHIPPED** — encoding, Unicode-tag smuggling, low-resource-lang, GCG suffix, payload-split, many-shot, Crescendo | LLM01 | T6 | cross-cutting; makes other skills land |
 | ✅ `hunt-agent-hitl-bypass` | **SHIPPED** — summary/action mismatch, fatigue/batching, standing-grant abuse, timeout-approve, unguarded sibling path | LLM06 | **T10, T15** | approval steps are the last line of defense |
 
+## OWASP MCP Top 10 (v0.1, 2025) → skills + lab gates
+
+The first dedicated Top-10 for Model Context Protocol. Coverage below; ✅ = a re-runnable lab gate exists.
+
+| MCP id | category | skill(s) | lab gate |
+|---|---|---|---|
+| MCP01 | Token Mismanagement & Secret Exposure | `hunt-agent-info-disclosure`, `hunt-agent-prompt-extraction` | ✅ `exploit_info_disclosure` / `exploit_prompt_extraction` |
+| MCP02 | Privilege Escalation via Scope Creep | `hunt-agent-auth-bypass`, `hunt-agent-multi-agent` | ✅ `exploit_auth_bypass` / `exploit_multi_agent` |
+| MCP03 | Tool Poisoning (rug-pull, **tool shadowing**, schema) | `hunt-agent-mcp-supply-chain` | ✅ `exploit_mcp_supply_chain`, `exploit_tool_shadowing` |
+| MCP04 | Supply-Chain / Dependency Tampering | `hunt-agent-mcp-supply-chain` | ✅ `exploit_mcp_supply_chain` |
+| MCP05 | Command Injection & Execution | `hunt-agent-tool-injection` | ✅ `exploit_mcp_stdio_rce` (cf. CVE-2025-6514), `exploit_tool_injection` |
+| MCP06 | Intent-Flow Subversion (PI via context) | `hunt-agent-prompt-injection` | field/reference (needs a model — see skill note) |
+| MCP07 | Insufficient AuthN/AuthZ | `hunt-agent-mcp-exposure` | ✅ `exploit_mcp_exposure` |
+| MCP08 | Lack of Audit & Telemetry | `DEFENSES-AND-DETECTION.md` (detection, not offense) | n/a |
+| MCP09 | Shadow MCP Servers | `hunt-agent-mcp-supply-chain`, `hunt-agent-multi-agent` | ✅ `exploit_tool_shadowing` |
+| MCP10 | Context Injection & Over-Sharing | `hunt-agent-output-exfil`, `hunt-agent-rag` | ✅ `exploit_output_exfil` / `exploit_rag` |
+
 ## Standards gaps still open after Phase B
 - **LLM09 Misinformation / T5 Cascading Hallucination / T7 Deceptive behaviour** — largely *evaluation/safety* problems, weakly "pentestable"; document as out-of-scope-for-offense with a pointer to eval tooling (PyRIT/garak/promptfoo) rather than faking a skill.
 - **T8 Repudiation & Untraceability** — a detection/telemetry finding; belongs in `DEFENSES-AND-DETECTION.md`, not an attack skill.

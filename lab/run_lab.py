@@ -31,7 +31,9 @@ EXPLOITS = ["exploit_tool_injection.py", "exploit_blind_exfil.py",
             # the final seven reachable REFERENCE classes, weaponised to a re-runnable gate
             "exploit_auth_bypass.py", "exploit_output_exfil.py", "exploit_guardrail_evasion.py",
             "exploit_memory_poisoning.py", "exploit_mcp_supply_chain.py", "exploit_mcp_exposure.py",
-            "exploit_multi_agent.py"]
+            "exploit_multi_agent.py",
+            # 2026-current techniques from the latest research (OWASP MCP Top 10, sleeper memory)
+            "exploit_tool_shadowing.py", "exploit_memory_sleeper.py", "exploit_mcp_stdio_rce.py"]
 
 
 _opener = urllib.request.build_opener(urllib.request.ProxyHandler({}))

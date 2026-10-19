@@ -17,7 +17,7 @@
 
 - [ ] **No client/engagement data** — no real target names, account UIDs, endpoints, bounty amounts, credentials, or PII. All examples are class-based / anonymized.
 - [ ] `python3 scripts/scan_secrets.py` passes locally (no leaked flags, home paths, or tokens).
-- [ ] `python3 lab/run_lab.py` passes locally (21/21 exploit gates).
+- [ ] `python3 lab/run_lab.py` passes locally (24/24 exploit gates).
 - [ ] `python3 scripts/lint_skills.py` passes locally (skill frontmatter + invariants).
 - [ ] `python3 engine/gates.py` self-check passes if you touched the gates.
 - [ ] `cd engine && python3 test_arms.py` passes if you touched `engine/score.py` or an adapter.

@@ -215,3 +215,16 @@ Where model-level filters fail, **network-level** detection (observe what the ag
 - **Benchmark + tooling section** — no skill currently tells the operator to reproduce on AgentDojo/InjecAgent or run garak/PyRIT/mcp-scan.
 </content>
 </invoke>
+
+## 10. 2026-H2 update — verified this pass (2026-10)
+
+New work since the sections above; each item below was checked to a primary/named source.
+
+- **OWASP MCP Top 10 (v0.1, 2025)** — the first dedicated Top-10 for Model Context Protocol. Ten categories: MCP01 Token Mismanagement & Secret Exposure, MCP02 Privilege Escalation via Scope Creep, **MCP03 Tool Poisoning** (incl. rug-pull, **tool shadowing**, schema poisoning as sub-techniques), MCP04 Supply-Chain/Dependency Tampering, **MCP05 Command Injection & Execution**, MCP06 Intent-Flow Subversion (prompt injection via context), MCP07 Insufficient AuthN/AuthZ, MCP08 Lack of Audit/Telemetry, MCP09 Shadow MCP Servers, MCP10 Context Injection & Over-Sharing. Mapped to skills + lab gates in `COVERAGE-MATRIX.md`.
+- **CVE-2025-6514** (mcp-remote, **CVSS 9.6**, CWE-78 OS command injection; JFrog, Jul 2025; fixed 0.1.16; package >437k downloads) — command injection when `mcp-remote` connects to an untrusted MCP server. Encoded deterministically as `lab/exploits/exploit_mcp_stdio_rce.py` (MCP05).
+- **AgentRedBench** (Dingeto & Leeney, **arXiv:2606.02240**, Jun 2026) — 215 underspecified-authorization scenarios across 24 SaaS integrations, 5 attack types. No-guard attack success **32–81%** across eight models; off-the-shelf open-source guards (Llama Guard, PromptGuard 2) show only partial detection, so a purpose-built guard was introduced. Cited in `hunt-agent-guardrail-evasion`. (NOT "guards detect nothing" — a common mis-summary; the paper reports partial, not zero, detection.)
+- **Dynamic / auto red-teaming is the field's direction of travel** — the move from fixed hand-designed injection templates (InjecAgent/AgentDojo/WASP) to LLM-generated, adaptive injections and attacker-agent loops. See AgentRedBench (above) as the verified anchor; related work (PI-Hunter, "Agent Against Agent", AgentDyn) is named but its arXiv IDs are **unverified** — confirm before citing. This is the repo's biggest missing capability (a dynamic red-team harness), tracked as a candidate below.
+- **Sleeper / temporally-extended memory poisoning** — surveys describe a planted memory that lies dormant and activates in a later session. Encoded deterministically as `lab/exploits/exploit_memory_sleeper.py`.
+
+### Candidate next capability
+- **Dynamic red-team harness** — an attacker-agent that generates and mutates injections against a target, scored by `engine/` arms + gates. Needs a model (local Ollama suffices, as in `field/`). Highest-leverage gap vs the 2026 literature; deliberately not yet built (it would be an untested harness without a target to point at).

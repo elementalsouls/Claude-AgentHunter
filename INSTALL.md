@@ -29,7 +29,7 @@ skills from elsewhere, point it there and re-run with the single-harness flag (`
 ```sh
 python3 engine/gates.py        # self-check the gate logic
 python3 engine/score.py        # usage
-python3 lab/run_lab.py         # 21/21 exploit gates
+python3 lab/run_lab.py         # 24/24 exploit gates
 ```
 Python 3.11+ (3.12 recommended; some harness-driver deps break on 3.14). No install for the lab —
 stdlib only.

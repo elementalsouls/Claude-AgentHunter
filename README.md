@@ -2,7 +2,7 @@
 
 # claude-agenthunter
 
-> **Pentest AI agents — and prove both the findings and the absences.** A skill bundle plus a runnable engine for red-teaming LLM agents: chatbots, RAG assistants, tool-calling copilots, MCP servers, and autonomous ReAct agents · **24 skills** (23 hunt + methodology) · 4 detection arms · 21/21 lab gates · 7 lab environments · FN 0 over 949 field runs · loads into Claude Code, OpenCode, Hermes, Codex CLI and AntiGravity.
+> **Pentest AI agents — and prove both the findings and the absences.** A skill bundle plus a runnable engine for red-teaming LLM agents: chatbots, RAG assistants, tool-calling copilots, MCP servers, and autonomous ReAct agents · **24 skills** (23 hunt + methodology) · 4 detection arms · 24/24 lab gates · 7 lab environments · FN 0 over 949 field runs · loads into Claude Code, OpenCode, Hermes, Codex CLI and AntiGravity.
 
 Built by **[Sachin Sharma](https://www.linkedin.com/in/sachinsharma8080/)** — Bug Hunting & GenAI Security Research.
 
@@ -12,7 +12,7 @@ Sibling to [Claude-BugHunter](https://github.com/elementalsouls/Claude-BugHunter
 different quarry. BugHunter hunts web apps; Claude-AgentHunter hunts the agents themselves.
 
 ```
-24 skills   ·   4 detection arms   ·   21/21 lab gates   ·   7 lab environments   ·   FN 0 over 949 runs
+24 skills   ·   4 detection arms   ·   24/24 lab gates   ·   7 lab environments   ·   FN 0 over 949 runs
 ```
 
 ## What is this
@@ -88,7 +88,7 @@ Or as a Claude Code plugin — namespaced, no copy, updates on version bump:
 
 ## Proof it works — `lab/` and `field/`
 
-- **`lab/`** — 21 deterministic exploit gates (`python3 lab/run_lab.py`), no model, no API key. Each
+- **`lab/`** — 24 deterministic exploit gates (`python3 lab/run_lab.py`), no model, no API key. Each
   encodes a vulnerability class and its control; `[CONFIRMED]` means re-runnable, not "the model said so".
 - **`field/`** — evidence from live/benchmark targets: AgentDojo (4 suites, 949 runs, FN 0), DVMCP
   (10/10), DVLA (ReAct forgery → SQL chain), InjecAgent (arm D 7/7 indirect), a real MCP target, ARKX.

@@ -17,7 +17,7 @@ or CTF. The secret in `secret.txt` is a synthetic lab marker.
 
 ## What's covered
 
-21 exploit gates, grown in increments as audits found hunt classes with no runnable exercise anywhere in the bundle — only prose. The final seven weaponised the last *reachable* REFERENCE classes to a re-runnable gate (two classes, prompt-injection and browser-use, deliberately stay field/reference — a deterministic no-model / no-browser exercise would fake the very thing under test).
+24 exploit gates, grown in increments as audits found hunt classes with no runnable exercise anywhere in the bundle — only prose. A middle seven weaponised the last *reachable* REFERENCE classes (two, prompt-injection and browser-use, deliberately stay field/reference — a deterministic no-model / no-browser exercise would fake the very thing under test). A final three encode the newest 2026 techniques from the current literature (OWASP MCP Top 10 **tool-shadowing** + **command-injection via `tools/call`**, cf. CVE-2025-6514; and **sleeper / temporally-extended** memory poisoning).
 
 ### Increment 1
 
@@ -50,6 +50,14 @@ or CTF. The secret in `secret.txt` is a synthetic lab marker.
 | `exploits/exploit_mcp_supply_chain.py` | mcp-supply-chain | a tool **description** carrying hidden **Unicode-Tag** chars decodes to a real exfil directive invisible to a human reviewer; a benign tool decodes to nothing (control) — the deterministic twin of the live `mcp/mcp_target.py` probe |
 | `exploits/exploit_mcp_exposure.py` | mcp-exposure | an **unauthenticated** JSON-RPC `resources/read` returns a protected resource; `initialize` returns a session first, so an unreachable server can't masquerade as hardened |
 | `exploits/exploit_multi_agent.py` | multi-agent | attacker input **forwarded by agent A** triggers a privileged escalation in **agent B** across an unchecked trust boundary; a benign task produces no downstream effect (control) |
+
+### 2026-current techniques (latest research)
+
+| Exploit | Class | Gate proven |
+|---|---|---|
+| `exploits/exploit_tool_shadowing.py` | tool-shadowing (OWASP **MCP03/MCP09**) | a later-registered tool whose **name collides** with a trusted one wins resolution, so a `send_email` call routes to `evil-mcp`; a uniquely-named tool routes to its trusted owner (control) |
+| `exploits/exploit_memory_sleeper.py` | sleeper memory-poisoning | a planted note stays **dormant** across unrelated requests and fires only when a later request matches its **trigger topic** — a temporally-extended payload; the non-matching request is the dormancy control |
+| `exploits/exploit_mcp_stdio_rce.py` | MCP command-injection (OWASP **MCP05**) | an MCP **`tools/call`** shells out with the argument unsanitised; newline-bypass `$()` fires an **OOB callback** (cf. CVE-2025-6514, mcp-remote, CVSS 9.6); a benign call is blind (control) |
 
 Components:
 - `target/vuln_agent.py` — the vulnerable agent. `/mode_a` interpolates input
