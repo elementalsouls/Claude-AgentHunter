@@ -124,7 +124,7 @@ Claude-Code / standalone by design.
 
 - [`USAGE.md`](USAGE.md) — the workflow, the engine, the lab, field evidence, end to end.
 - [`INSTALL.md`](INSTALL.md) — plugin + copy install across five harnesses.
-- [`docs/skills.md`](docs/skills.md) — the 23-skill catalog.
+- [`docs/skills.md`](docs/skills.md) — the 23 hunt-agent skills catalog (+ the `ai-agent-methodology` orchestrator = 24 total).
 - [`docs/THREAT-MODEL.md`](docs/THREAT-MODEL.md) · [`docs/COVERAGE-MATRIX.md`](docs/COVERAGE-MATRIX.md) · [`docs/RESEARCH-2026.md`](docs/RESEARCH-2026.md) · [`docs/DEFENSES-AND-DETECTION.md`](docs/DEFENSES-AND-DETECTION.md) · [`docs/REFERENCES.md`](docs/REFERENCES.md)
 - [`CONTRIBUTING.md`](CONTRIBUTING.md) · [`CHANGELOG.md`](CHANGELOG.md)
 

@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "claude-agenthunter"
 version = "0.1.0"
-description = "Claude-AgentHunter — runnable engine + 23-skill bundle for red-teaming LLM agents: 4 detection arms, a 14-gate validation lab, and the FP + Negative-Result gates that stop false findings in both directions."
+description = "Claude-AgentHunter — runnable engine + 24 skills (23 hunt-agent + methodology) for red-teaming LLM agents: 4 detection arms, a 24-gate validation lab, and the FP + Negative-Result gates that stop false findings in both directions."
 readme = "README.md"
 requires-python = ">=3.11"
 license = { text = "MIT" }
